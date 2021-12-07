@@ -3,9 +3,10 @@ from collections import Counter
 
 crab_positions = Counter(crab_positions)
 
+# starts point 0
 fuel_to_reach_last_point = sum(
     k * v for k, v in crab_positions.items()
-)  # starts point 0
+)
 crabs_to_the_left = 0
 crabs_to_the_right = sum(crab_positions.values()) - crab_positions.get(0, 0)
 for i in range(1, max(crab_positions.keys())):
@@ -19,6 +20,7 @@ for i in range(1, max(crab_positions.keys())):
         break
     fuel_to_reach_last_point = fuel_to_reach_point_i
 
+# starts point 0
 fuel_to_reach_last_point = sum(
     [(k * (k + 1) // 2) * v for k, v in crab_positions.items()]
 )
