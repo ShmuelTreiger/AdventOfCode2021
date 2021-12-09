@@ -72,17 +72,13 @@ for signal_pattern in signal_patterns:
             value_map[signals[5]] = 5
         else:
             value_map[signals[4]] = 5
-    elif (
-        difference in signals[4]
-    ):  # difference between 9 and 8 in and 2, but not 3 or 5
+    elif difference in signals[4]:  # difference between 9 and 8 in and 2, but not 3 or 5
         value_map[signals[4]] = 2
         if three_index == 5:
             value_map[signals[3]] = 5
         else:
             value_map[signals[5]] = 5
-    elif (
-        difference in signals[5]
-    ):  # difference between 9 and 8 in and 2, but not 3 or 5
+    elif difference in signals[5]:  # difference between 9 and 8 in and 2, but not 3 or 5
         value_map[signals[5]] = 2
         if three_index == 3:
             value_map[signals[4]] = 5

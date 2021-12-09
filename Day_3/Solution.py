@@ -35,9 +35,7 @@ while len(sorted_lines) > 1:
     middle = int(end / 2)
     if (beginning - end) % 2 == 1:  # even number of rows remaining
         middle_plus_one = middle + 1
-        if (
-            sorted_lines[middle_plus_one][index] > sorted_lines[middle][index]
-        ):  # first is 0, second is 1
+        if sorted_lines[middle_plus_one][index] > sorted_lines[middle][index]:  # first is 0, second is 1
             sorted_lines = sorted_lines[middle_plus_one:]
             index += 1
             continue
@@ -51,9 +49,7 @@ while len(sorted_lines) > 1:
 
 oxygenator_rating = int("0b" + "".join(str(digit) for digit in sorted_lines[0]), 2)
 
-sorted_lines = sorted(
-    lines_of_binary
-)  # if used binary search, wouldn't have to sort again
+sorted_lines = sorted(lines_of_binary)  # if used binary search, wouldn't have to sort again
 index = 0
 while len(sorted_lines) > 1:
     beginning = 0
@@ -61,9 +57,7 @@ while len(sorted_lines) > 1:
     middle = int(end / 2)
     if (beginning - end) % 2 == 1:  # even number of rows remaining
         middle_plus_one = middle + 1
-        if (
-            sorted_lines[middle_plus_one][index] > sorted_lines[middle][index]
-        ):  # first is 0, second is 1
+        if sorted_lines[middle_plus_one][index] > sorted_lines[middle][index]:  # first is 0, second is 1
             sorted_lines = sorted_lines[:middle_plus_one]
             index += 1
             continue
