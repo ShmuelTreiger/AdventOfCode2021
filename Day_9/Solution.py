@@ -11,7 +11,7 @@ n = len(cave_floor[0])
 for i in range(m):
     for j in range(n):
         flag = True
-        neighbors = [(i-1, j), (i+1, j), (i, j-1), (i, j+1)]
+        neighbors = [(i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1)]
         for neighbor in neighbors:
             if 0 <= neighbor[0] < m and 0 <= neighbor[1] < n:
                 if cave_floor[neighbor[0]][neighbor[1]] <= cave_floor[i][j]:
@@ -22,7 +22,7 @@ for i in range(m):
 
 print(risk_level)
 
-heap = [0,0,0]
+heap = [0, 0, 0]
 for i in range(m):
     for j in range(n):
         stack = deque()
